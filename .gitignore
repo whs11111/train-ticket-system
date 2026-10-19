@@ -1,0 +1,27 @@
+# Local credentials and machine-specific configuration
+**/application-local.yaml
+**/application-local.yml
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencies, generated files, editor settings and local backups
+**/node_modules/
+**/target/
+**/dist/
+**/coverage/
+**/.idea/
+**/.vscode/
+**/.codex/
+**/backups/
+*.iml
+*.log
+*.tsbuildinfo
+.eslintcache
+Thumbs.db
+.DS_Store
