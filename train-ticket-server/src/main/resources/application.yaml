@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: train-ticket-server
+  config:
+    import: optional:classpath:application-local.yaml
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/train_ticket_demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: ${SERVER_PORT:8080}
+
+alipay:
+  app-id: ${ALIPAY_APP_ID:}
+  private-key: ${ALIPAY_PRIVATE_KEY:}
+  alipay-public-key: ${ALIPAY_PUBLIC_KEY:}
+  gateway-url: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+  format: JSON
+  charset: UTF-8
+  sign-type: RSA2
+  return-url: ${ALIPAY_RETURN_URL:http://localhost:5173/orderDetail}
+  notify-url: ${ALIPAY_NOTIFY_URL:}

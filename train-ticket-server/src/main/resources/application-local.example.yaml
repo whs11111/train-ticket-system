@@ -1,0 +1,14 @@
+# Copy this file to application-local.yaml and fill in your own configuration.
+# application-local.yaml is ignored by Git. Never commit your actual credentials.
+spring:
+  datasource:
+    username: root
+    password: "YOUR_MYSQL_PASSWORD"
+
+# Only required for sandbox payments and refunds.
+alipay:
+  app-id: ""
+  private-key: ""
+  alipay-public-key: ""
+  return-url: "http://localhost:5173/orderDetail"
+  notify-url: ""
